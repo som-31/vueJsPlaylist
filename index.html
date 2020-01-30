@@ -6,22 +6,18 @@
     <link href="style.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script></head>
 <body>
-<div id="vue-app"> 
 
-    <!-- Bag image -->
-     <div id="bag" v-bind:class="{ burst : ended}"></div>
+    <h2>Multiple Vue Instances</h2>
 
-     <!-- bag-health -->
-      <div id="bag-health">
-          <div v-bind:style="{ width: health + '%'}"></div>
-      </div>
+<div id="vue-app-one"> 
+    <h3>{{title}}</h3>
+    <p>{{greet}}</p>
+</div>
+<div id="vue-app-two">
+    <h3>{{title}}</h3>
+    <p>{{ greet}}</p>
 
-     <!-- controls -->
-     <div id="controls">
-         <button v-on:click="punch" v-if="!ended">Punch</button>
-         <button v-on:click="restart">Restart</button>
-     </div>
-
+<button v-on:click="change">change one title</button>
 </div>
 <script src="app.js"></script>
 </body>
